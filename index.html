@@ -2,52 +2,69 @@
 <html>
 
   <head>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-  <title></title>
-</head>
-<body>
-	<h1>Now Playing</h1>
-	<h2 id = "currentSong"></h2>
-<!--  Content  -->
-  
-<!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
-<video autoplay loop id="video-background" muted plays-inline>
-  <source src="bling.mp4" type="video/mp4">
-</video>
-    
-    <div id="allcontent">
-	<h1 class="display-3">Now Playing</h1>
-	<h2 class="display-4" id = "currentSong"></h2>
-      
-	<div id="imagebox">
-   	 <img id="boombox" src="boombox.svg">
+
+    <title></title>
+  </head>
+
+  <body>
+    <div id="playlist">
+      <h1 id="current"></h1>
+      <li id="pw">Pretty Wings</li>
+      <li id="sl">Sweet Lady</li>
+      <li id="mg">My Goodies</li>
+      <li id="lg">Let It Go</li>
+      <li id="uf">Uptown Funk</li>
+
     </div>
 
-    <button class="btn btn btn-dark" id="playButton" onclick="playAudio()">
-       
+
+
+    <h1>Now Playing</h1>
+    <h2 id="currentSong"></h2>
+    <div id="imagebox">
+      <img id="boombox" src="boombox.svg">
+
+      <!--  Content  -->
+
+      <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
+      <video autoplay loop id="video-background" muted plays-inline>
+  <source src="bling.mp4" type="video/mp4">
+</video>
+
+      <div id="allcontent">
+        <h1 class="display-3">Now Playing</h1>
+        <h2 class="display-4" id="currentSong"></h2>
+
+        <div id="imagebox">
+          <img id="boombox" src="boombox.svg">
+        </div>
+
+        <button class="btn btn btn-dark" id="playButton" onclick="playAudio()">
+
        <span class="glyphicon glyphicon-play"></span>
      </button>
-    
-	<button class="btn btn btn-dark" id="pauseButton" onclick="pauseAudio()">
+
+        <button class="btn btn btn-dark" id="pauseButton" onclick="pauseAudio()">
     <span class="glyphicon glyphicon-pause"></span>
     </button>
-    
-	<button class="btn btn btn-dark" id="skipUpButton" onclick = "skipAhead()">
+
+        <button class="btn btn btn-dark" id="skipUpButton" onclick="skipAhead()">
     <span class="glyphicon glyphicon-step-forward"></span>
     </button>
 
-    
-	<button class="btn btn btn-dark" id="skipBackButton" onclick="skipBack()">
+
+        <button class="btn btn btn-dark" id="skipBackButton" onclick="skipBack()">
      <span class="glyphicon glyphicon-step-backward"></span>
       </button>
 
-        </div>
-  
-	<div id="audioDiv">
-		<audio id = "audio" src="PrettyWings.mp3"></audio>
-	</div>     
-        
+      </div>
+
+      <div id="audioDiv">
+        <audio id="audio" src="PrettyWings.mp3"></audio>
+      </div>
+
     </div>
 
     </div>
@@ -55,17 +72,6 @@
     <div id="audioDiv">
       <audio id="audio" src="PrettyWings.mp3"></audio>
     </div>
-
-
-    <div class="playlist">
-      <h1 id="current"></h1>
-      <ol>
-        <li id="pw">Pretty Wings</li>
-        <li id="sl">Sweet Lady</li>
-        <li id="mg">My Goodies</li>
-      </ol>
-    </div>
-
 
     <script type="text/javascript" src="jukebox.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
