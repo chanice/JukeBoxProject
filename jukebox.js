@@ -6,7 +6,6 @@ function Song (title, currentTime, songLink, id){
 	this.id = id;
 }
 counter = 0;
-song1 = new Song("PrettyWings", 0, "PrettyWings.mp3", 'pw');
 
 song1 = new Song("Pretty Wings", 0, "PrettyWings.mp3", 'pw');
 
