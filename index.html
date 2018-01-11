@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
 	<title></title>
 </head>
 <body>
 	<h1>Now Playing</h1>
 	<h2 id = "currentSong"></h2>
-	<button id="playButton" onclick="playAudio()">Play</button>
+	
 	<button id="pauseButton" onclick="pauseAudio()">Pause</button>
 	<button id="skipUpButton" onclick = "skipAhead()">Skip Forward</button>
 	<button id="skipBackButton" onclick="skipBack()">Skip Backward</button>
-	<audio controls id = "audio"> <source src="PrettyWings.mp3"></audio>
+	<audio id = "audio" src="PrettyWings.mp3"></audio>
 
 
+    
+    
+   <div id="audioplayer">
+       <button id="playButton" onclick="playAudio()">Play</button>
+	<div id="timeline">
+		<div id="playhead"></div>
+	</div>
+</div>
+    
+    <style>
+#timeline{
+	width: 400px;
+	height: 20px;
+	background: #4200f7;
+	margin-top: 20px;
+	float: left;
+	border-radius: 15px;
+}
 
+#playhead{
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	margin-top: 1px;
+	background: rgba(0, 255, 196, 0.82);
+}
+</style>
 
 
 
