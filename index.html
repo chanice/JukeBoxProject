@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
@@ -16,33 +17,25 @@
       <li id="mg">My Goodies</li>
       <li id="lg">Let It Go</li>
       <li id="uf">Uptown Funk</li>
-
     </div>
 
+    <!--  Content  -->
 
-
-    <h1>Now Playing</h1>
-    <h2 id="currentSong"></h2>
-    <div id="imagebox">
-      <img id="boombox" src="boombox.svg">
-
-      <!--  Content  -->
-
-      <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
-      <video autoplay loop id="video-background" muted plays-inline>
+    <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
+    <video autoplay loop id="video-background" muted plays-inline>
   <source src="bling.mp4" type="video/mp4">
-</video>
+    </video>
 
-      <div id="allcontent">
-        <h1 class="display-3">Now Playing</h1>
-        <h2 class="display-4" id="currentSong"></h2>
+    <div id="allcontent">
+      <h1 class="display-3">Now Playing</h1>
+      <h2 class="display-4" id="currentSong"></h2>
 
-        <div id="imagebox">
-          <img id="boombox" src="boombox.svg">
-        </div>
+      <div id="imagebox">
+        <img id="boombox" src="boombox.svg">
+      </div>
 
+      <div id="buttons">
         <button class="btn btn btn-dark" id="playButton" onclick="playAudio()">
-
        <span class="glyphicon glyphicon-play"></span>
      </button>
 
@@ -57,21 +50,18 @@
 
         <button class="btn btn btn-dark" id="skipBackButton" onclick="skipBack()">
      <span class="glyphicon glyphicon-step-backward"></span>
-      </button>
-
-      </div>
-
-      <div id="audioDiv">
-        <audio id="audio" src="PrettyWings.mp3"></audio>
-      </div>
-
-    </div>
+   </button></div>
 
     </div>
 
     <div id="audioDiv">
       <audio id="audio" src="PrettyWings.mp3"></audio>
     </div>
+
+    </div>
+
+    </div>
+
 
     <script type="text/javascript" src="jukebox.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
