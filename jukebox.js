@@ -33,14 +33,17 @@ function skipAhead(){
 	counter++;
 	document.getElementById("audioDiv").innerHTML = "<audio id = \"audio\" src=\"" + songList[counter].songLink + "\"></audio>"
 	displaySong(songList[counter]);
-	getCurrSong(songList[counter]);
+	getCurrSong(songList[(counter-1)],songList[counter]);
 	playAudio();
 	getCurrSong();
 }
 
-function getCurrSong(song){
-	document.getElementById("current").innerText = song.title;
-	document.getElementById(song.id).style.fontSize = "20px";
+function getCurrSong(prevSong, currSong){
+	document.getElementById("current").innerText = prevSong.title;
+	document.getElementById(prevSong.id).style.color = "white";
+
+	document.getElementById("current").innerText = currSong.title;
+	document.getElementById(currSong.id).style.color = "#58B560";
 
 }
 
