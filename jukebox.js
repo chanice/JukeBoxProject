@@ -1,5 +1,5 @@
 
-function Song (title, currentTime, songLink, id){
+function Song (title, songLink, id){
 	this.title = title;
 	this.songLink = songLink;
 	this.id = id;
@@ -15,9 +15,9 @@ song2 = new Song("Sweet Lady","SweetLady.mp3", 'sl');
 song3 = new Song("My Goodies","MyGoodies.mp3", 'mg');
 
 
-song4 = new Song("Let it Go","LetItGo.mp3")
+song4 = new Song("Let it Go","LetItGo.mp3", 'lg');
 
-song5 = new Song("Uptown Funk","UptownFunk.mp3")
+song5 = new Song("Uptown Funk","UptownFunk.mp3", 'uf');
 var songList = [song1, song2, song3, song4, song5];
 
 function playAudio(){
@@ -44,11 +44,10 @@ function skipAhead(){
 	document.getElementById("audioDiv").innerHTML = "<audio id = \"audio\" src=\"" + songList[counter].songLink + "\"></audio>"
 
 	displaySong(songList[counter]);
-
-	getCurrSong(songList[(counter-1)],songList[counter]);
+	getCurrSong(songList[(counter-1)], songList[counter]);
 
 	playAudio();
-	getCurrSong();
+	// getCurrSong();
 }
 
 function getCurrSong(prevSong, currSong){
@@ -78,5 +77,3 @@ timeline.addEventListener("click", function (event) {
 	moveplayhead(event);
 	music.currentTime = duration * clickPercent(event);
 }, false);
-
-}

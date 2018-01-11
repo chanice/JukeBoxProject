@@ -1,4 +1,10 @@
-body {}
+body {
+  list-style-type: none;
+}
+
+/* ___________________________________________________________
+                      ERIKA
+  ______________________________________________________________*/
 
 #timeline {
   width: 400px;
@@ -30,14 +36,29 @@ body {}
   position: absolute;
 }
 
+/* ___________________________________________________________
+                      DANAYA
+______________________________________________________________*/
+
 #playlist {
   background-color: #171717;
   display: inline-block;
   font-family: proxima-nova, sans-serif;
   font-weight: lighter;
   font-size: 14px;
+  padding: 20px;
 }
 
-#playlist #pw, #playlist #sl, #playlist #mg {
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+#pw, #sl, #mg, #lg, #uf {
+  border-bottom: 1px solid #282828;
+}
+
+#playlist #pw, #playlist #sl, #playlist #mg, #playlist #lg, #playlist #uf {
   color: white;
+  padding: 0px;
 }
