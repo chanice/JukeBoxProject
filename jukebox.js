@@ -48,7 +48,6 @@ function skipAhead(){
 
 
 }
-
 function skipBack(){
 	counter--;
 	if(counter<0){
@@ -58,4 +57,26 @@ function skipBack(){
 	// displaySong(songList[counter]);
 	playAudio();
 }
+
+
+var duration;
+var music = document.getElementById('playhead');
+music.addEventListener("timeupdate", timeUpdate, false);
+
+function timeUpdate() {
+	var playPercent = 100 * (music.currentTime / duration);
+	playhead.style.marginLeft = playPercent + "%";
+}
+
+// Gets audio file duration
+music.addEventListener("canplaythrough", function () {
+	duration = music.duration;
+}, false);
+
+//Makes timeline clickable
+timeline.addEventListener("click", function (event) {
+	moveplayhead(event);
+	music.currentTime = duration * clickPercent(event);
+}, false);
+// console.log(songList[counter].songLink)
 

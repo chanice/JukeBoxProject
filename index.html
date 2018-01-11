@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="style.css">
 	<title></title>
 </head>
 <body>
 	<h1>Now Playing</h1>
 	<h2 id = "currentSong"></h2>
-	<button id="playButton" onclick="playAudio()">Play</button>
+	
 	<button id="pauseButton" onclick="pauseAudio()">Pause</button>
 	<button id="skipUpButton" onclick = "skipAhead()">Skip Forward</button>
 	<button id="skipBackButton" onclick="skipBack()">Skip Backward</button>
-
+  
 	<div id="audioDiv">
 		<audio id = "audio" src="PrettyWings.mp3"></audio>
 	</div>
+    
+   <div id="audioplayer">
+       <button id="playButton" onclick="playAudio()">Play</button>
+	<div id="timeline">
+		<div id="playhead"></div>
+	</div>
+</div>
+    
 
-		<script type="text/javascript" src="jukebox.js"></script>
-	</body>
+
+
+
+
+	<script type="text/javascript" src="jukebox.js"></script>
+</body>
 
 </html>
