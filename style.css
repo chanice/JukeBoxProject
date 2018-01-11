@@ -1,3 +1,6 @@
+body{
+
+}
 #timeline{
 	width: 400px;
 	height: 20px;
@@ -13,4 +16,17 @@
 	border-radius: 50%;
 	margin-top: 1px;
 	background: rgba(0, 255, 196, 0.82);
+}
+#boombox{
+    width: 80%;
+    height: 80%;
+}
+
+#imagebox{
+      position: relative;
+}
+#buttons{
+  
+    position: absolute;
+
 }
