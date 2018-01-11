@@ -39,33 +39,25 @@ function displaySong(song){
 function skipAhead(){
 	counter++;
 		if(counter>songList.length){
-			counter = 0; 
+			counter = 0;
 		}
 	document.getElementById("audioDiv").innerHTML = "<audio id = \"audio\" src=\"" + songList[counter].songLink + "\"></audio>"
 
 	displaySong(songList[counter]);
-	getCurrSong(songList[counter]);
 
-	playAudio();
+	getCurrSong(songList[(counter-1)],songList[counter]);
 
-
-
-}
-function skipBack(){
-	counter--;
-	if(counter<0){
-		counter = songList.length-1;
-	}
-	document.getElementById("audioDiv").innerHTML = "<audio id = \"audio\" src=\"" + songList[counter].songLink + "\"></audio>"
 	playAudio();
 	getCurrSong();
 }
 
+function getCurrSong(prevSong, currSong){
+	document.getElementById("current").innerText = prevSong.title;
+	document.getElementById(prevSong.id).style.color = "white";
 
-function getCurrSong(song){
-	document.getElementById("current").innerText = song.title;
-	document.getElementById(song.id).style.fontSize = "20px";
-
+	document.getElementById("current").innerText = currSong.title;
+	document.getElementById(currSong.id).style.color = "#58B560";
+}
 
 var duration;
 var music = document.getElementById('playhead');

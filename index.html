@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+  <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	<title></title>
-</head>
-<body>
-	<h1>Now Playing</h1>
-	<h2 id = "currentSong"></h2>
-	<div id="imagebox">
-    <img id="boombox" src="boombox.svg">
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Now Playing</h1>
+    <h2 id="currentSong"></h2>
+    <div id="imagebox">
+      <img id="boombox" src="boombox.svg">
     </div>
     <div id="buttons">
-    <button class="btn btn-outline-danger" id="playButton" onclick="playAudio()">
-       
+      <button class="btn btn-outline-danger" id="playButton" onclick="playAudio()">
+
        <span class="glyphicon glyphicon-play"></span>
      </button>
-    
-	<button class="btn btn-outline-primary" id="pauseButton" onclick="pauseAudio()">
-    
+
+      <button class="btn btn-outline-primary" id="pauseButton" onclick="pauseAudio()">
+
     <span class="glyphicon glyphicon-pause"></span>
-    
+
     </button>
-    
-	<button class="btn btn-outline-secondary" id="skipUpButton" onclick = "skipAhead()">
-        
+
+      <button class="btn btn-outline-secondary" id="skipUpButton" onclick="skipAhead()">
+
     <span class="glyphicon glyphicon-step-forward"></span>
-    
+
     </button>
-    
-	<button class="btn btn-outline-success" id="skipBackButton" onclick="skipBack()">
-    
+
+      <button class="btn btn-outline-success" id="skipBackButton" onclick="skipBack()">
+
      <span class="glyphicon glyphicon-step-backward"></span>
-    
+
     </button>
-        </div>
-  
-	<div id="audioDiv">
-		<audio id = "audio" src="PrettyWings.mp3"></audio>
-	</div>
-    
-   <div id="audioplayer">
-       
-	<div id="timeline">
-		<div id="playhead"></div>
-	</div>
-</div>
-    
+    </div>
 
+    <div id="audioDiv">
+      <audio id="audio" src="PrettyWings.mp3"></audio>
+    </div>
 
-		<div class="playlist">
-			<h1 id="current"></h1>
-			<ol>
-				<li id="pw">Pretty Wings</li>
-				<li id="sl">Sweet Lady</li>
-				<li id="mg">My Goodies</li>
-			</ol>
+    <div id="audioplayer">
 
-		</div>
-
-		<button id="playButton" onclick="playAudio()">Play</button>
-		<button id="pauseButton" onclick="pauseAudio()">Pause</button>
-		<button id="skipUpButton" onclick="skipAhead()">Skip Forward</button>
-		<button id="skipBackButton" onclick="skipBack()">Skip Backward</button>
-
-		<div id="audioDiv">
-			<audio id="audio" src="PrettyWings.mp3"></audio>
-		</div>
+      <div id="timeline">
+        <div id="playhead"></div>
+      </div>
+    </div>
 
 
 
+    <div class="playlist">
+      <h1 id="current"></h1>
+      <ol>
+        <li id="pw">Pretty Wings</li>
+        <li id="sl">Sweet Lady</li>
+        <li id="mg">My Goodies</li>
+      </ol>
 
-	<script type="text/javascript" src="jukebox.js"></script>
+    </div>
+
+    <button id="playButton" onclick="playAudio()">Play</button>
+    <button id="pauseButton" onclick="pauseAudio()">Pause</button>
+    <button id="skipUpButton" onclick="skipAhead()">Skip Forward</button>
+    <button id="skipBackButton" onclick="skipBack()">Skip Backward</button>
+
+    <div id="audioDiv">
+      <audio id="audio" src="PrettyWings.mp3"></audio>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="jukebox.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</body>
+  </body>
 
 </html>
