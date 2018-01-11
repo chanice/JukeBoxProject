@@ -1,25 +1,30 @@
-// function Jukebox(song){
-//
-// }
 
-
-function Song (title, currentTime, songLink){
+function Song (title, currentTime, songLink, id){
 	this.title = title;
 	this.currentTime = currentTime;
 	this.songLink = songLink;
+	this.id = id;
 }
 counter = 0;
-song1 = new Song("PrettyWings", 0, "PrettyWings.mp3");
 
-song2 = new Song("Sweet Lady", 0, "SweetLady.mp3");
+song1 = new Song("Pretty Wings", 0, "PrettyWings.mp3", 'pw');
 
-song3 = new Song("MyGoodies", 0, "MyGoodies.mp3");
 
-var songList = [song1, song2, song3];
+song2 = new Song("Sweet Lady", 0, "SweetLady.mp3", 'sl');
+
+
+song3 = new Song("My Goodies", 0, "MyGoodies.mp3", 'mg');
+
+
+song4 = new Song("Let it Go", 0, "LetItGo.mp3")
+
+song5 = new Song("Uptown Funk", 0, "UptownFunk.mp3")
+var songList = [song1, song2, song3, song4, song5];
 
 function playAudio(){
 	var x = document.getElementById("audio")
 	x.load();
+	displaySong(songList[counter]);
 	x.play();
 
 }
@@ -31,15 +36,38 @@ function pauseAudio(){
 function displaySong(song){
 	document.getElementById("currentSong").innerText = song.title;
 }
-displaySong(song1)
-console.log()
 
 function skipAhead(){
 	counter++;
+		if(counter>songList.length){
+			counter = 0; 
+		}
 	document.getElementById("audioDiv").innerHTML = "<audio id = \"audio\" src=\"" + songList[counter].songLink + "\"></audio>"
+
 	displaySong(songList[counter]);
+	getCurrSong(songList[counter]);
+
 	playAudio();
+
+
+
 }
+function skipBack(){
+	counter--;
+	if(counter<0){
+		counter = songList.length-1;
+	}
+	document.getElementById("audioDiv").innerHTML = "<audio id = \"audio\" src=\"" + songList[counter].songLink + "\"></audio>"
+	// displaySong(songList[counter]);
+
+	playAudio();
+	getCurrSong();
+}
+
+
+function getCurrSong(song){
+	document.getElementById("current").innerText = song.title;
+	document.getElementById(song.id).style.fontSize = "20px";
 
 
 var duration;
@@ -63,3 +91,7 @@ timeline.addEventListener("click", function (event) {
 }, false);
 // console.log(songList[counter].songLink)
 
+
+}
+
+// console.log(songList[counter].songLink)
