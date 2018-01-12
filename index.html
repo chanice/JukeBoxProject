@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display" rel="stylesheet">
 
     <title></title>
   </head>
@@ -22,13 +23,13 @@
     <!--  Content  -->
 
     <!--  Video is muted & autoplays, placed after major DOM elements for performance & has an image fallback  -->
-    <video autoplay loop id="video-background" muted plays-inline>
+    <video id="video-background" autoplay loop muted plays-inline>
   <source src="bling.mp4" type="video/mp4">
     </video>
 
-    <div id="allcontent">
+    <div class="rounded-circle" id="allcontent">
       <h1 class="display-3">Now Playing</h1>
-      <h2 class="display-4" id="currentSong"></h2>
+      <h2 class="display-4" id="currentSong">Now Playing</h2>
 
       <div id="imagebox">
         <img id="boombox" src="boombox.svg">
@@ -51,18 +52,18 @@
         <button class="btn btn btn-dark" id="skipBackButton" onclick="skipBack()">
      <span class="glyphicon glyphicon-step-backward"></span>
    </button></div>
-
+<img id="equalizer" src="https://media.giphy.com/media/2bWms8shHiXkY/200.gif">
+        <img id="speaker1" src="https://static.wixstatic.com/media/ce3310_a3dbec9f1dda485eb9bedf85e8f06a7d.gif">
+        <img id="speaker2" src="https://static.wixstatic.com/media/ce3310_a3dbec9f1dda485eb9bedf85e8f06a7d.gif">
+        <img id="speaker3" src="https://static.wixstatic.com/media/ce3310_a3dbec9f1dda485eb9bedf85e8f06a7d.gif">
+        <img id="speaker4" src="https://static.wixstatic.com/media/ce3310_a3dbec9f1dda485eb9bedf85e8f06a7d.gif">
     </div>
 
     <div id="audioDiv">
       <audio id="audio" src="PrettyWings.mp3"></audio>
     </div>
 
-    </div>
-
-    </div>
-
-
+  
     <script type="text/javascript" src="jukebox.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </body>

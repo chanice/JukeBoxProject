@@ -12,10 +12,24 @@ h1, h2 {
 
 .display-3 {
   color: purple;
+     -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+ -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: 50;
 }
 
 .display-4 {
   color: red;
+ 
+}
+@-webkit-keyframes example {
+    from {color: purple;}
+    to {color: forestgreen;}
+}
+@keyframes example {
+    from {color: purple;}
+    to {color: forestgreen;}
 }
 
 #boombox {
@@ -24,13 +38,14 @@ h1, h2 {
 }
 
 #imagebox {
-  position: relative;
+    margin: auto;
+    text-align: center;
 }
 
 #buttons {
   position: absolute;
   top: 240px;
-  left: 180px;
+  left: 210px;
 }
 
 #allcontent {
@@ -38,10 +53,11 @@ h1, h2 {
   opacity: 0.9;
   position: relative;
   margin: auto;
-  width: 530px;
-  border: 5px solid purple;
+  width: 600px;
+  height: 600px;
+  border: 10px solid purple;
   padding: 10px;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 #video-background {
@@ -55,6 +71,44 @@ h1, h2 {
   height: auto;
   z-index: -100;
 }
+
+#equalizer{
+    width: 120px;
+    position: absolute;
+    top:280px;
+    left: 240px;
+}
+#speaker1{
+    position: absolute;
+    width: 150px;
+    top:300px;
+    left:53px;
+}
+#speaker2{
+    position: absolute;
+    width: 150px;
+    top:300px;
+    left: 386px;
+}
+
+#speaker3{
+    position: absolute;
+    width: 60px;
+    top:240px;
+    left: 430px;
+    
+}
+#speaker4{
+    position: absolute;
+    width: 60px;
+    top:240px;
+    left: 97px;
+    
+}
+.display-3, .display-4{
+    font-family: 'Sedgwick Ave Display', cursive;
+}
+
 
 /* ___________________________________________________________
                       DANAYA
